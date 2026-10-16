@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DAEA9F85-EAE0-49C8-9E43-07593C57B454}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Nea_Technical_Solution</RootNamespace>
+    <AssemblyName>Nea Technical Solution</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CsvHelper, Version=30.0.0.0, Culture=neutral, PublicKeyToken=8c4959082be5c823, processorArchitecture=MSIL">
+      <HintPath>..\packages\CsvHelper.30.0.1\lib\net47\CsvHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.HashCode, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.HashCode.1.0.0\lib\net461\Microsoft.Bcl.HashCode.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.118.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.118.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.118.0\lib\net46\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.118.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.118.0\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.0\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.2\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Arc.cs" />
+    <Compile Include="CurrentQuestion.cs" />
+    <Compile Include="Djikstra.cs" />
+    <Compile Include="DjikstraQuestionsPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DjikstraQuestionsPage.Designer.cs">
+      <DependentUpon>DjikstraQuestionsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DjikstrasPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DjikstrasPage.Designer.cs">
+      <DependentUpon>DjikstrasPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Graph.cs" />
+    <Compile Include="GraphForRecommendedQuestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraphForRecommendedQuestion.Designer.cs">
+      <DependentUpon>GraphForRecommendedQuestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KruskalAlgorithm.cs" />
+    <Compile Include="KruskalPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KruskalPage.Designer.cs">
+      <DependentUpon>KruskalPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GraphForKruskalQuestionsPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GraphForKruskalQuestionsPage.Designer.cs">
+      <DependentUpon>GraphForKruskalQuestionsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KruskalQuestionsPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KruskalQuestionsPage.Designer.cs">
+      <DependentUpon>KruskalQuestionsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Node.cs" />
+    <Compile Include="PracticeDjikstra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PracticeDjikstra.Designer.cs">
+      <DependentUpon>PracticeDjikstra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PracticeQuestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PracticeQuestion.Designer.cs">
+      <DependentUpon>PracticeQuestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrimsPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrimsPage.Designer.cs">
+      <DependentUpon>PrimsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrimsQuestionPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrimsQuestionPage.Designer.cs">
+      <DependentUpon>PrimsQuestionPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PriorityQueue.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Question.cs" />
+    <Compile Include="RecommendMeAQuestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecommendMeAQuestion.Designer.cs">
+      <DependentUpon>RecommendMeAQuestion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignInPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignInPage.Designer.cs">
+      <DependentUpon>SignInPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SignUpPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SignUpPage.Designer.cs">
+      <DependentUpon>SignUpPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestingMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestingMenu.Designer.cs">
+      <DependentUpon>TestingMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TestPrimsTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestPrimsTable.Designer.cs">
+      <DependentUpon>TestPrimsTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TutorialsPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TutorialsPage.Designer.cs">
+      <DependentUpon>TutorialsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UnionFind.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="UserLoginPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserLoginPage.Designer.cs">
+      <DependentUpon>UserLoginPage.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DjikstraQuestionsPage.resx">
+      <DependentUpon>DjikstraQuestionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DjikstrasPage.resx">
+      <DependentUpon>DjikstrasPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphForRecommendedQuestion.resx">
+      <DependentUpon>GraphForRecommendedQuestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KruskalPage.resx">
+      <DependentUpon>KruskalPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GraphForKruskalQuestionsPage.resx">
+      <DependentUpon>GraphForKruskalQuestionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KruskalQuestionsPage.resx">
+      <DependentUpon>KruskalQuestionsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PracticeDjikstra.resx">
+      <DependentUpon>PracticeDjikstra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PracticeQuestion.resx">
+      <DependentUpon>PracticeQuestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrimsPage.resx">
+      <DependentUpon>PrimsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrimsQuestionPage.resx">
+      <DependentUpon>PrimsQuestionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="RecommendMeAQuestion.resx">
+      <DependentUpon>RecommendMeAQuestion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignInPage.resx">
+      <DependentUpon>SignInPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SignUpPage.resx">
+      <DependentUpon>SignUpPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestingMenu.resx">
+      <DependentUpon>TestingMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestPrimsTable.resx">
+      <DependentUpon>TestPrimsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TutorialsPage.resx">
+      <DependentUpon>TutorialsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserLoginPage.resx">
+      <DependentUpon>UserLoginPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="favicon.ico" />
+    <Content Include="logo.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Import Project="..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('..\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
+</Project>
